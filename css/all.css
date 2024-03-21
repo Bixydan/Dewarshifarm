@@ -58,11 +58,17 @@ a:hover{
 #nav a:hover{
 	color: #13b71e;
 }
-.slideshow-container {
+.slideshow-container{
   max-width: 1024px;
   height: 600px;
   position: relative;
   margin: auto;
+}
+.small1{
+	margin: auto 200px;
+}
+.small2{
+	margin: auto 200px;
 }
 .dot {
   height: 15px;
@@ -98,7 +104,7 @@ a:hover{
 	margin: 0 auto 10px;
 }
 #main{
-	margin: 0 0 150px;
+	margin: 0 0 100px;
 }
 #main .content{
 	margin: 0 auto;
@@ -131,6 +137,23 @@ a:hover{
 }
 #main .three-columns .more:hover{
 	text-decoration: underline;
+}
+#main .three-columns .column .searchbox ul{
+	margin: 0px 0px 0px -35px;
+}
+#main .three-columns .column .searchbox ul>li {
+	display: inline-block;
+	margin: 0px 10px 0px 10px
+}
+#main .location{
+	width: 943px;
+	color: inherit;
+	margin: 0px auto;
+}
+#main .location p{
+	letter-spacing: 2px;
+	font-size: 15px;
+	line-height: 200%;
 }
 #footer{
 	width: 943px;
