@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dewarshi Organic</title>
+	<link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<h1>Dewarshi <span> Organic</span></h1>
+			<ul id="nav">
+				<li class="active1"><a href="#">Home</a></li>
+				<li><a href="Organic.html">Farm</a></li>
+				<li><a href="Farmstay.html">Farmstay</a></li>
+				<li><a href="Nursery.html">Nursery</a></li>
+				<li><a href="contact us.html">Contact</a></li>
+			</ul>
+		</div>
+		<div id="main">
+			<div id="slideshow">
+				<body>
+					<div class="slideshow-container">
+						<div class="mySlides fade">
+							<img src="images/img1.jpg">
+						</div>
+
+						<div class="mySlides fade">
+					  		<img src="images/img2.jpg">
+						</div>
+
+						<div class="mySlides fade">
+							<img src="images/img3.jpg">
+						</div>
+						<div class="mySlides fade">
+							<img src="images/img4.jpg">
+						</div>
+						<div class="mySlides fade">
+							<img src="images/img5.jpg">
+						</div>
+						<div class="mySlides fade">
+							<img src="images/img6.jpg">
+						</div>
+					</div>
+				</body>
+			</div>
+				<br>
+				<div id="dot" style="text-align:center">
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				</div>
+				<a class="prev" onclick="prevSlide()">&#10094;</a>
+        <a class="next" onclick="showSlides()">&#10095;</a>
+<script>
+var timeOut = 2000;
+        var slideIndex = 0;
+        var autoOn = true;
+
+        autoSlides();
+
+        function autoSlides() {
+            timeOut = timeOut - 20;
+
+            if (autoOn == true && timeOut < 0) {
+                showSlides();
+            }
+            setTimeout(autoSlides, 20);
+        }
+
+        function prevSlide() {
+
+            timeOut = 2000;
+
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slideIndex--;
+
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            if (slideIndex == 0) {
+                slideIndex = 3
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        function showSlides() {
+
+            timeOut = 2000;
+
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slideIndex++;
+
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+</script>
+<br>		
+			<div class="three-columns">
+				<div class="column">
+					<h2>Organic farm</h2>
+					<p> Dewarshi farm is registered as an organic farm. All the products available here are totally organic. </p>
+					<a href="Organic.html" class="more">[view more]</a>
+				</div>
+				<div class="column">
+					<h2>Animal Husbandry</h2>
+					<p> Dewarshi farm has wide variety of domesticated animals. Goats, variety of poultry, Buffalo, Cow and Birds are major animals reared here.</p>
+					<a href="Organic.html" class="more">[view more]</a>
+				</div>
+				<div class="column">
+					<h2>Varietal Nursery</h2>
+					<p> Dewarshi have nursery of different varieties of Coffee and Orange. We also offer some fruits' and flowers' nursery as well. </p>
+					<a href="Nursery.html" class="more">[view more]</a>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<p>Copyright &copy; 2024 Dewarshi Organic. All rights reserved.</p>
+		</div>
+	</div>
+</body>
+</html>
