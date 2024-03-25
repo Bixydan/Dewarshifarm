@@ -2,7 +2,7 @@ body{
 	margin: 0;
 	background: #121518;
 	font: 12px/14px "Times New Roman", Times, serif;
-	min-width: 943px;
+	min-width: 90%;
 	color: #fff;
 }
 a{
@@ -16,7 +16,7 @@ a:hover{
 	overflow: hidden;
 }
 #header{
-	width: 943px;
+	width: 65%;
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 25px 0;
@@ -25,10 +25,10 @@ a:hover{
 	font-size: 30px;
 	line-height: 34px;
 	color: #fff;
-	margin: 0;
+	margin: 0 20% 0 0;
 	font-weight: normal;
 	float: left;
-	max-width:240px;
+	max-width:100%;
 }
 #header h1 span{
 	color: #13b71e;
@@ -37,10 +37,10 @@ a:hover{
 	margin: 0;
 	padding: 7px 0 0;
 	list-style: none;
-	float: right;
+	float: left;
 	font-size: 18px;
 	line-height: 18px;
-	max-width: 705px;
+	max-width: 65%;
 }
 #nav li:first-child{
 	border-left: 1px solid #717070;
@@ -58,17 +58,31 @@ a:hover{
 #nav a:hover{
 	color: #13b71e;
 }
-.slideshow-container{
-  max-width: 1024px;
-  height: 600px;
-  position: relative;
-  margin: auto;
+#slideshow{
+	margin: 0 auto;
+	max-width: 70%;
+	max-height: 550px;
+	overflow: hidden;
+	box-shadow: 0px 0px 15px #fff;
+	position: relative;
+	overflow: hidden;
+}
+#slideshow img{
+	max-width: 100%;
 }
 .small1{
-	margin: auto 200px;
+	margin: 0 20%;
+}
+.small1 img{
+	width: 100%;
+	height: 90%;
 }
 .small2{
-	margin: auto 200px;
+	margin: 0 20%;
+}
+.small2 img{
+	width: 100%;
+	height: 90%;
 }
 .dot {
   height: 15px;
@@ -132,30 +146,19 @@ a:hover{
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-#slideshow{
-	margin: 0 auto 0px;
-	overflow: hidden;
-	box-shadow: 0px 0px 15px #fff;
-	width: 1024px;
-	height: 600px;
-}
-#dot{
-	margin: 0 auto 10px;
-}
 #main{
 	margin: 0 0 100px;
 }
 #main .content{
-	margin: 0 auto;
-	width: 943px;
+	max-width: 943px;
 }
 #main .three-columns{
-	width: 943px;
+	max-width: 70%;
 	margin: 0 auto;
 	overflow: hidden;
 }
 #main .three-columns .column{
-	width: 29%;
+	width: 310px;
 	float: left;
 	margin: 0 18px 15px;
 }
@@ -184,8 +187,12 @@ a:hover{
 	display: inline-block;
 	margin: 0px 10px 0px 10px
 }
+#main .three-columns .column .google{
+	width: 600px;
+	height: 250px;
+}
 #main .location{
-	width: 943px;
+	max-width: 65%;
 	color: inherit;
 	margin: 0px auto;
 }
@@ -195,7 +202,7 @@ a:hover{
 	line-height: 200%;
 }
 #footer{
-	width: 943px;
+	max-width: 90%;
 	margin:0 auto;
 	text-align: right;
 	padding: 0 0 20px;
@@ -203,41 +210,18 @@ a:hover{
 #footer p{
 	margin: 0;
 }
-@media screen and (max-width: 767px){
-	body{
-		min-width: 767px;
-	}
-	#header{
-		width: 100%;
-	}
-	#nav{
-		display: none;
-	}
-	#slideshow{
-		max-width: 100%;
-	}
-	#slideshow img{
-		width: 100%;
-	}
-	#main .three-columns .column{
-		width: 50%;
-		float: left;
-	}
+
+@media only screen and (max-width: 800px) {
+#slideshow{
+max-height: 550px;
 }
-@media screen and(max-width: 479px){
-	body{
-		min-width: 479px;
-	}
-	#header{
-		width: 100%;
-	}
-	#nav{
-		display: none;
-	}
-	#slideshow{
-		max-width: 100%;
-	}
-	#slideshow img{
-		width: 100%;
-	}
+
+@media only screen and (max-width: 767px) {
+#slideshow{
+max-height: 300px;
+}
+
+@media only screen and (max-width: 300px) {
+#slideshow{
+max-height: 150px;
 }
