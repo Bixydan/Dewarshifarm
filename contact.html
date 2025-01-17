@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="index.html">Dewarshi Organic<span>.</span></a>
+        <ul class="menu-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="farmstay.html">Farm Stay</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main">
+      <div class="text">Where are we?</div>
+      <div id="slideshow">
+        <body>
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="img3.jpg">
+            </div>
+            <div class="mySlides fade">
+              <img src="img4.jpg">
+            </div>
+            <div class="mySlides fade">
+              <img src="img5.jpg">
+            </div>
+            <div class="mySlides fade">
+              <img src="img6.jpg">
+            </div>
+          </div>
+        </body>
+      </div>
+        <br>
+        <div id="dot" style="text-align:center"> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+        <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <a class="next" onclick="showSlides()">&#10095;</a>
+<script>
+var timeOut = 2000;
+        var slideIndex = 0;
+        var autoOn = true;
+
+        autoSlides();
+
+        function autoSlides() {
+            timeOut = timeOut - 20;
+
+            if (autoOn == true && timeOut < 0) {
+                showSlides();
+            }
+            setTimeout(autoSlides, 20);
+        }
+
+        function prevSlide() {
+
+            timeOut = 2000;
+
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slideIndex--;
+
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            if (slideIndex == 0) {
+                slideIndex = 3
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        function showSlides() {
+
+            timeOut = 2000;
+
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slideIndex++;
+
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+</script>
+<br>
+      <div class="three-columns">
+        <div class="column">
+          <h2>Contact Us</h2>
+          <p> Lekswanra, Chhipchhipe, Devghat RM- 3, Tanahun </p>
+          <p> Contact: 9822783298, 9843644931 </p>
+          <p>Email: dewarshi2078@gmail.com</p>
+        </div>
+        <div class="column">
+          <h2>Social Media</h2>
+          <div class="searchbox">
+            <ul>
+              <li><a class="twitter" href="https://twitter.com/"><img src="twitter.png" height="30px" width="30px"></a></li>
+              <li><a class="facebook" href="https://www.facebook.com/profile.php?id=61555121012138"><img src="facebook.png" height="30px" width="30px"></a></li>
+              <li><a class="Instagram" href="https://www.instagram.com/dewarshifarm/?fbclid=IwAR2Ai_4OLk_ChtS3fvYbDK4npUsUIgDQ73O5_9-bTL1tC8xEUzkgfg7bFqQ"><img src="instagram.png" height="30px" width="30px"></a></li>
+              <li><a class= "Youtube" href="https://www.youtube.com/@dewarshifarm"><img src="youtube.png" height="30px" width="30px"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="google">
+            <h2>Location</h2>
+            <p> <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d19411.399479107436!2d84.39247150912024!3d27.842059973619715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDUwJzAzLjAiTiA4NMKwMjInNDQuMCJF!5e1!3m2!1sen!2snp!4v1711006915188!5m2!1sen!2snp" allowfullscreen="" max-width=100% loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div><form action="#">
+        <div class="form-row">
+      </form>
+    </div>
+  </body>
+</html>
