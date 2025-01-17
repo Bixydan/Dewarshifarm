@@ -171,6 +171,6 @@ header .navbar {
 }
 .main .three-columns .column .searchbox ul>li {
   display: inline-block;
-  margin: 0px 5% 0px 5%;
+  margin-left: 5%;
   max-width: 100%;
 }
